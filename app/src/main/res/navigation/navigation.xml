@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_graph"
+    app:startDestination="@id/penyakitFragment">
+
+    <fragment
+        android:id="@+id/penyakitFragment"
+        android:name="com.example.tugasakhirpember.fragment.PenyakitFragment"
+        android:label="Penyakit Fragment">
+        <action
+            android:id="@+id/action_penyakitFragment_to_detailPenyakitFragment"
+            app:destination="@id/detailPenyakitFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/detailPenyakitFragment"
+        android:name="com.example.tugasakhirpember.fragment.DetailPenyakitFragment"
+        android:label="Detail Penyakit Fragment">
+        <argument
+            android:name="KODE_PENYAKIT"
+            app:argType="string" />
+    </fragment>
+
+    <!-- Tambahkan fragment lain sesuai kebutuhan -->
+
+</navigation>
